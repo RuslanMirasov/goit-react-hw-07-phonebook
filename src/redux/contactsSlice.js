@@ -9,15 +9,19 @@ const persistConfig = {
 
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: { contacts: [] },
+  initialState: {
+    items: [],
+    isLoading: false,
+    error: null,
+  },
   reducers: {
     addContact(state, action) {
-      if (state.contacts.find(contact => contact.name.toLowerCase() === action.payload.name.toLowerCase())) return alert(`Contact already exists!`);
-      state.contacts.unshift({ ...action.payload });
+      if (state.items.find(contact => contact.name.toLowerCase() === action.payload.name.toLowerCase())) return alert(`Contact already exists!`);
+      state.items.unshift({ ...action.payload });
     },
 
     deleteContact(state, action) {
-      state.contacts = state.contacts.filter(contact => contact.id !== action.payload.id);
+      state.items = state.items.filter(contact => contact.id !== action.payload.id);
     },
   },
 });

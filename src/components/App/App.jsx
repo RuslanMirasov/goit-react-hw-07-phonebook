@@ -9,6 +9,7 @@ import { ContactForm } from 'components/ContactForm/ContactForm';
 
 export default function App() {
   const contacts = useSelector(getContacts);
+  console.log(contacts.items);
   return (
     <main className={css.main}>
       <h1 hidden>React HW-06-Phonebook</h1>
@@ -17,7 +18,7 @@ export default function App() {
         <ContactForm />
       </Section>
 
-      {contacts.length > 0 ? (
+      {contacts.items.length > 0 ? (
         <Section title="Contacts">
           <Filter />
           <ContactList />

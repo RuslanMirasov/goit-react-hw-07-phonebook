@@ -9,7 +9,6 @@ import { ContactForm } from 'components/ContactForm/ContactForm';
 
 export default function App() {
   const contacts = useSelector(getContacts);
-  console.log(contacts.items);
   return (
     <main className={css.main}>
       <h1 hidden>React HW-06-Phonebook</h1>

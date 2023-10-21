@@ -2,14 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 320px;
   margin: 0 auto;
   gap: 14px;
 }
 
 .label {
   display: block;
-  width: 100%;
+  width: 32%;
 }
 
 .labelText {
@@ -50,13 +49,13 @@
 .submit {
   display: flex;
   position: relative;
-  width: 100%;
+  width: 32%;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 50px;
-  margin-top: 10px;
+  height: 48px;
+  margin-top: 23px;
   background-color: #5c91b1;
   color: #fff;
   outline: none;
@@ -68,7 +67,6 @@
   cursor: pointer;
   border: none;
   transform: translate(0px, 0px);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .submit:before {
@@ -91,4 +89,15 @@
 .submit:active {
   transform: translate(0px, 1px);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 767px) {
+  .label {
+    width: 100%;
+  }
+  .submit {
+    width: 100%;
+    max-width: 375px;
+    margin-top: 0px;
+  }
 }
